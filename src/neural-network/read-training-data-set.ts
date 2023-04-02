@@ -1,14 +1,14 @@
-import { readdir, readFile } from "node:fs/promises";
-import { extname, join } from "node:path";
+import { readFileNames } from "@/utils/file";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const readTrainingDataSet = async () => {
   const trainingDataDirectory = "training-data";
 
-  const files = await readdir(trainingDataDirectory);
-  const jsonFiles = files.filter((f) => extname(f) === ".json");
+  const files = await readFileNames(trainingDataDirectory);
 
   return Promise.all(
-    jsonFiles.map(async (file) => {
+    files.map(async (file) => {
       const data = await readFile(join(trainingDataDirectory, file), "utf-8");
 
       return JSON.parse(data);

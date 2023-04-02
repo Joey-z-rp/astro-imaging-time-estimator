@@ -11,7 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const forecasts = await getForecasts();
+  const [forecasts] = await getForecasts();
 
   res.status(200).json(forecasts);
 }

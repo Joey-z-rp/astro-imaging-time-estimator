@@ -14,3 +14,7 @@ export type ConvertedTrainingData = {
     totalImagingTime: number;
   };
 };
+
+export type Estimate = {
+  totalImagingTime: number;
+};

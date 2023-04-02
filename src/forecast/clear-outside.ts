@@ -63,14 +63,14 @@ const getForecastsForDay = (day: number, $: cheerio.CheerioAPI) => {
   };
 };
 
-export const getForecastsFromClearOutside = async () => {
+export const getForecastsFromClearOutside = async (days: number[]) => {
   const clearOutside = await fetch(
     "https://clearoutside.com/forecast/-27.53/153.10"
   );
   const html = await clearOutside.text();
   const $ = cheerio.load(html);
 
-  const forecasts = getForecastsForDay(0, $);
+  const forecasts = days.map((day) => getForecastsForDay(day, $));
 
   return forecasts;
 };

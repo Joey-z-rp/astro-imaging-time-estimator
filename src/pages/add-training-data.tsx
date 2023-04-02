@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/AddTrainingData.module.css";
 import { useState } from "react";
 import { Forecast } from "@/types/forecast";
+import { findForecasts } from "@/utils/forecast";
 
 export default function AddTrainingData() {
   const [data, setData] = useState<string>();
@@ -12,17 +13,13 @@ export default function AddTrainingData() {
     fetch("/api/get-forecasts")
       .then((res) => res.json())
       .then((res: { forecastedAt: string; hourlyForecasts: Forecast[] }) => {
-        const hourlyForecasts = res.hourlyForecasts;
-        const startIndex = hourlyForecasts.findIndex(
-          (f) => f.hour === startTime
-        );
-        const filteredForecasts = hourlyForecasts.slice(
-          startIndex,
-          startIndex + duration
-        );
         const forecasts = {
           ...res,
-          hourlyForecasts: filteredForecasts,
+          hourlyForecasts: findForecasts(
+            res.hourlyForecasts,
+            startTime,
+            duration
+          ),
         };
         const jsonString = JSON.stringify(
           {
@@ -51,7 +48,7 @@ export default function AddTrainingData() {
       <main>
         <h1>Add training data</h1>
         <iframe
-          className={styles["data-display"]}
+          className={styles["weather-display"]}
           src="https://clearoutside.com/forecast/-27.53/153.10"
         ></iframe>
         <label>Start time</label>
@@ -62,6 +59,7 @@ export default function AddTrainingData() {
         />
         <label>Duration</label>
         <input
+          type="number"
           placeholder="Duration"
           value={duration}
           onChange={(event) => setDuration(Number(event.target.value))}
