@@ -1,10 +1,7 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import styles from "@/styles/AddTrainingData.module.css";
 import { useState } from "react";
 import { Forecast } from "@/types/forecast";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function AddTrainingData() {
   const [data, setData] = useState<string>();

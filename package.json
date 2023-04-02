@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "sed -i '' 's/\\.\\.\\/node_modules\\/gpu\\.js\\/src\\/index.js/gpu\\.js/' ./node_modules/brain.js/dist/index.js"
   },
   "dependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "brain.js": "^2.0.0-beta.20",
     "cheerio": "^1.0.0-rc.12",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",

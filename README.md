@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Post installation
+https://github.com/BrainJS/brain.js/issues/104
+Run `npm run postinstall` after `npm install`
+
 ## Getting Started
 
 First, run the development server:
