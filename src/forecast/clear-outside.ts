@@ -48,8 +48,8 @@ const getForecastsForDay = (day: number, $: cheerio.CheerioAPI) => {
   const temperature = getHourlyForecast("Temperature", dailyForecasts, $);
 
   return {
-    createdAt: new Date().toISOString(),
-    hourly: hours.map((hour, index) => ({
+    forecastedAt: new Date().toISOString(),
+    hourlyForecasts: hours.map((hour, index) => ({
       hour,
       totalClouds: totalClouds[index],
       lowClouds: lowClouds[index],

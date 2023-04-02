@@ -1,20 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { getForecasts } from "@/forecast";
+import { Forecast } from "@/types/forecast";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  createdAt: string;
-  hourly: {
-    hour: string;
-    totalClouds: number;
-    lowClouds: number;
-    mediumClouds: number;
-    highClouds: number;
-    rainChance: number;
-    rainAmount: number;
-    windSpeed: number;
-    temperature: number;
-  }[];
+  forecastedAt: string;
+  hourlyForecasts: Forecast[];
 };
 
 export default async function handler(
