@@ -1,0 +1,63 @@
+{
+  "createdAt": "03/04/2023, 18:07:54",
+  "exposureLength": 240,
+  "totalImagingTime": 15,
+  "forecastedAt": "2023-04-03T08:07:54.729Z",
+  "hourlyForecasts": [
+    {
+      "hour": "19",
+      "totalClouds": 44,
+      "lowClouds": 49,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 21,
+      "rainAmount": 0,
+      "windSpeed": 7,
+      "temperature": 22
+    },
+    {
+      "hour": "20",
+      "totalClouds": 50,
+      "lowClouds": 59,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 10,
+      "rainAmount": 0,
+      "windSpeed": 6,
+      "temperature": 22
+    },
+    {
+      "hour": "21",
+      "totalClouds": 30,
+      "lowClouds": 43,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 3,
+      "rainAmount": 0,
+      "windSpeed": 5,
+      "temperature": 21
+    },
+    {
+      "hour": "22",
+      "totalClouds": 22,
+      "lowClouds": 32,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 4,
+      "rainAmount": 0,
+      "windSpeed": 4,
+      "temperature": 21
+    },
+    {
+      "hour": "23",
+      "totalClouds": 17,
+      "lowClouds": 24,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 2,
+      "rainAmount": 0,
+      "windSpeed": 4,
+      "temperature": 20
+    }
+  ]
+}

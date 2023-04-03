@@ -36,11 +36,11 @@ export const convertInput = (
 export const convertTrainingDataSet = (rawDataSet: RawTrainingData[]) =>
   rawDataSet.map((data) => {
     const totalImagingTime =
-      (data.totalImagingTime / data.hourlyForecasts.length) * 60;
+      data.totalImagingTime / (data.hourlyForecasts.length * 60);
 
     if (totalImagingTime < 0 || totalImagingTime > 1)
       throw new Error(
-        `Failed to normalize total imaging time ${data.totalImagingTime} for ${data.createdAt}`
+        `Failed to normalize total imaging time ${data.totalImagingTime} for ${data.createdAt}: ${totalImagingTime}`
       );
 
     return {
