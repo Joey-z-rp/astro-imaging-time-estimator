@@ -1,0 +1,74 @@
+{
+  "createdAt": "02/06/2023, 18:36:16",
+  "exposureLength": 240,
+  "totalImagingTime": 310,
+  "forecastedAt": "2023-06-02T08:36:16.620Z",
+  "hourlyForecasts": [
+    {
+      "hour": "18",
+      "totalClouds": 3,
+      "lowClouds": 2,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 0,
+      "rainAmount": 0,
+      "windSpeed": 4,
+      "temperature": 19
+    },
+    {
+      "hour": "19",
+      "totalClouds": 8,
+      "lowClouds": 7,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 0,
+      "rainAmount": 0,
+      "windSpeed": 3,
+      "temperature": 18
+    },
+    {
+      "hour": "20",
+      "totalClouds": 8,
+      "lowClouds": 6,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 0,
+      "rainAmount": 0,
+      "windSpeed": 2,
+      "temperature": 17
+    },
+    {
+      "hour": "21",
+      "totalClouds": 17,
+      "lowClouds": 15,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 2,
+      "rainAmount": 0,
+      "windSpeed": 2,
+      "temperature": 16
+    },
+    {
+      "hour": "22",
+      "totalClouds": 20,
+      "lowClouds": 20,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 4,
+      "rainAmount": 0,
+      "windSpeed": 3,
+      "temperature": 16
+    },
+    {
+      "hour": "23",
+      "totalClouds": 30,
+      "lowClouds": 30,
+      "mediumClouds": 0,
+      "highClouds": 0,
+      "rainChance": 10,
+      "rainAmount": 0,
+      "windSpeed": 3,
+      "temperature": 15
+    }
+  ]
+}
