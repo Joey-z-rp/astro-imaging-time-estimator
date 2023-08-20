@@ -2,3 +2,9 @@
   width: 100%;
   height: 600px;
 }
+
+.estimation-data {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}

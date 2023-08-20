@@ -3,6 +3,7 @@ import styles from "@/styles/AddTrainingData.module.css";
 import { useState } from "react";
 import { Forecast } from "@/types/forecast";
 import { findForecasts } from "@/utils/forecast";
+import { Nav } from "@/components/Nav";
 
 export default function AddTrainingData() {
   const [data, setData] = useState<string>();
@@ -47,25 +48,28 @@ export default function AddTrainingData() {
       </Head>
       <main>
         <h1>Add training data</h1>
+        <Nav />
         <iframe
           className={styles["weather-display"]}
           src="https://clearoutside.com/forecast/-27.53/153.10"
         ></iframe>
-        <label>Start time</label>
-        <input
-          placeholder="Start time"
-          value={startTime}
-          onChange={(event) => setStartTime(event.target.value)}
-        />
-        <label>Duration</label>
-        <input
-          type="number"
-          placeholder="Duration"
-          value={duration}
-          onChange={(event) => setDuration(Number(event.target.value))}
-        />
-        <button onClick={getForecasts}>Get forecasts</button>
-        <button onClick={saveData}>Save data</button>
+        <div className={styles["data-inputs"]}>
+          <label>Start time</label>
+          <input
+            placeholder="Start time"
+            value={startTime}
+            onChange={(event) => setStartTime(event.target.value)}
+          />
+          <label>Duration</label>
+          <input
+            type="number"
+            placeholder="Duration"
+            value={duration}
+            onChange={(event) => setDuration(Number(event.target.value))}
+          />
+          <button onClick={getForecasts}>Get forecasts</button>
+          <button onClick={saveData}>Save data</button>
+        </div>
         <textarea
           className={styles["data-display"]}
           value={data}

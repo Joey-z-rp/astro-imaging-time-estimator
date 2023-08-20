@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import { Estimate } from "@/types/neural-network";
 import { Estimates } from "@/components/Estimates";
+import { Nav } from "@/components/Nav";
 
 export default function Home() {
   const [estimates, setEstimates] = useState<Estimate[]>();
@@ -28,31 +29,34 @@ export default function Home() {
       </Head>
       <main>
         <h1>Estimate Imaging Time</h1>
+        <Nav />
         <iframe
           className={styles["weather-display"]}
           src="https://clearoutside.com/forecast/-27.53/153.10"
         ></iframe>
-        <label>Start time</label>
-        <input
-          placeholder="Start time"
-          value={startTime}
-          onChange={(event) => setStartTime(event.target.value)}
-        />
-        <label>Duration</label>
-        <input
-          type="number"
-          placeholder="Duration"
-          value={duration}
-          onChange={(event) => setDuration(Number(event.target.value))}
-        />
-        <label>Exposure Length</label>
-        <input
-          type="number"
-          placeholder="Exposure length"
-          value={exposureLength}
-          onChange={(event) => setExposureLength(Number(event.target.value))}
-        />
-        <button onClick={getEstimates}>Run Estimation</button>
+        <div className={styles["estimation-data"]}>
+          <label>Start time</label>
+          <input
+            placeholder="Start time"
+            value={startTime}
+            onChange={(event) => setStartTime(event.target.value)}
+          />
+          <label>Duration</label>
+          <input
+            type="number"
+            placeholder="Duration"
+            value={duration}
+            onChange={(event) => setDuration(Number(event.target.value))}
+          />
+          <label>Exposure Length</label>
+          <input
+            type="number"
+            placeholder="Exposure length"
+            value={exposureLength}
+            onChange={(event) => setExposureLength(Number(event.target.value))}
+          />
+          <button onClick={getEstimates}>Run Estimation</button>
+        </div>
         <Estimates estimates={estimates} />
       </main>
     </>
